@@ -115,10 +115,10 @@ function hr_search_facetapi_default_facet_settings() {
   $facet = new stdClass();
   $facet->disabled = FALSE; /* Edit this to true to make a default facet disabled initially */
   $facet->api_version = 1;
-  $facet->name = 'search_api@default_node_index:block:field_emergencies';
+  $facet->name = 'search_api@default_node_index:block:field_disasters';
   $facet->searcher = 'search_api@default_node_index';
   $facet->realm = 'block';
-  $facet->facet = 'field_emergencies';
+  $facet->facet = 'field_disasters';
   $facet->enabled = TRUE;
   $facet->settings = array(
     'weight' => 0,
@@ -144,7 +144,7 @@ function hr_search_facetapi_default_facet_settings() {
     'nofollow' => 1,
     'show_expanded' => 0,
   );
-  $export['search_api@default_node_index:block:field_emergencies'] = $facet;
+  $export['search_api@default_node_index:block:field_disasters'] = $facet;
 
   $facet = new stdClass();
   $facet->disabled = FALSE; /* Edit this to true to make a default facet disabled initially */

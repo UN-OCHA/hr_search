@@ -62,7 +62,7 @@ function hr_search_default_search_api_index() {
         "field_bundles" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
         "field_organizations" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_location" : { "type" : "integer", "entity_type" : "taxonomy_term" },
-        "field_emergencies" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
+        "field_disasters" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
         "field_last_name" : { "type" : "text" },
         "field_first_name" : { "type" : "text" },
         "field_coordination_hubs" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
