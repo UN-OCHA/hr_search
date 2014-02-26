@@ -20,9 +20,9 @@ function hr_search_current_search_default_items() {
       'results' => array(
         'id' => 'text',
         'label' => 'Results',
-        'text' => 'Filter: <span class="facetapi-active">[facetapi_results:result-count] item</span> displayed',
+        'text' => '<a href="/[facetapi_results:search-path]"><i class="fa fa-times-circle-o fa-lg"></i></a> Filter: <span class="facetapi-active">[facetapi_results:result-count] item</span> displayed',
         'plural' => 1,
-        'text_plural' => 'Filter: <span class="facetapi-active">[facetapi_results:result-count] items</span> displayed',
+        'text_plural' => '<a href="/[facetapi_results:search-path]"><i class="fa fa-times-circle-o fa-lg"></i></a> Filter: <span class="facetapi-active">[facetapi_results:result-count] items</span> displayed',
         'plural_condition' => 'facetapi_results:result-count',
         'wrapper' => 1,
         'element' => 'div',
