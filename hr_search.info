@@ -20,6 +20,7 @@ features[facetapi][] = search_api@default_node_index::field_bundles
 features[facetapi][] = search_api@default_node_index::field_coordination_hubs
 features[facetapi][] = search_api@default_node_index::field_disasters
 features[facetapi][] = search_api@default_node_index::field_document_type
+features[facetapi][] = search_api@default_node_index::field_event_category
 features[facetapi][] = search_api@default_node_index::field_job_title
 features[facetapi][] = search_api@default_node_index::field_location
 features[facetapi][] = search_api@default_node_index::field_locations
