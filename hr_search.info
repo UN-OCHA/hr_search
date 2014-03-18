@@ -31,6 +31,7 @@ features[facetapi][] = search_api@default_node_index:block:field_bundles
 features[facetapi][] = search_api@default_node_index:block:field_coordination_hubs
 features[facetapi][] = search_api@default_node_index:block:field_disasters
 features[facetapi][] = search_api@default_node_index:block:field_document_type
+features[facetapi][] = search_api@default_node_index:block:field_event_category
 features[facetapi][] = search_api@default_node_index:block:field_job_title
 features[facetapi][] = search_api@default_node_index:block:field_location
 features[facetapi][] = search_api@default_node_index:block:field_locations
