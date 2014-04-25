@@ -157,11 +157,12 @@ function hr_search_facetapi_default_facet_settings() {
   $facet->facet = 'field_ind_cross_tagging';
   $facet->enabled = FALSE;
   $facet->settings = array(
-    'operator' => 'and',
+    'operator' => 'or',
     'hard_limit' => '50',
     'dependencies' => array(
       'bundle' => 'none',
       'bundle_selected' => array(),
+      'roles' => array(),
     ),
     'facet_mincount' => '1',
     'facet_missing' => '0',
@@ -240,11 +241,12 @@ function hr_search_facetapi_default_facet_settings() {
   $facet->facet = 'field_ind_standards';
   $facet->enabled = FALSE;
   $facet->settings = array(
-    'operator' => 'and',
+    'operator' => 'or',
     'hard_limit' => '50',
     'dependencies' => array(
       'bundle' => 'none',
       'bundle_selected' => array(),
+      'roles' => array(),
     ),
     'facet_mincount' => '1',
     'facet_missing' => '0',
@@ -457,6 +459,33 @@ function hr_search_facetapi_default_facet_settings() {
     'pretty_paths_alias' => 'global-cluster',
   );
   $export['search_api@default_node_index::field_sector'] = $facet;
+
+  $facet = new stdClass();
+  $facet->disabled = FALSE; /* Edit this to true to make a default facet disabled initially */
+  $facet->api_version = 1;
+  $facet->name = 'search_api@default_node_index::field_sectors';
+  $facet->searcher = 'search_api@default_node_index';
+  $facet->realm = '';
+  $facet->facet = 'field_sectors';
+  $facet->enabled = FALSE;
+  $facet->settings = array(
+    'operator' => 'or',
+    'hard_limit' => '50',
+    'dependencies' => array(
+      'bundle' => 'none',
+      'bundle_selected' => array(),
+      'roles' => array(),
+    ),
+    'facet_mincount' => '1',
+    'facet_missing' => '0',
+    'flatten' => 0,
+    'query_type' => 'term',
+    'default_true' => '1',
+    'facet_search_ids' => array(),
+    'exclude' => 0,
+    'pretty_paths_alias' => 'global-clusters',
+  );
+  $export['search_api@default_node_index::field_sectors'] = $facet;
 
   $facet = new stdClass();
   $facet->disabled = FALSE; /* Edit this to true to make a default facet disabled initially */
@@ -1184,6 +1213,48 @@ function hr_search_facetapi_default_facet_settings() {
     'submit_realm' => 'Save and go back to realm settings',
   );
   $export['search_api@default_node_index:block:field_sector'] = $facet;
+
+  $facet = new stdClass();
+  $facet->disabled = FALSE; /* Edit this to true to make a default facet disabled initially */
+  $facet->api_version = 1;
+  $facet->name = 'search_api@default_node_index:block:field_sectors';
+  $facet->searcher = 'search_api@default_node_index';
+  $facet->realm = 'block';
+  $facet->facet = 'field_sectors';
+  $facet->enabled = TRUE;
+  $facet->settings = array(
+    'weight' => 0,
+    'widget' => 'facetapi_links',
+    'filters' => array(),
+    'active_sorts' => array(
+      'display' => 'display',
+      'active' => 'active',
+      'count' => 'count',
+      'indexed' => 0,
+    ),
+    'sort_weight' => array(
+      'display' => '-50',
+      'active' => '-48',
+      'count' => '-47',
+      'indexed' => '-46',
+    ),
+    'sort_order' => array(
+      'display' => '4',
+      'active' => '3',
+      'count' => '3',
+      'indexed' => '4',
+    ),
+    'empty_behavior' => 'none',
+    'soft_limit' => '20',
+    'nofollow' => 1,
+    'show_expanded' => 0,
+    'empty_text' => array(
+      'value' => '',
+      'format' => 'panopoly_wysiwyg_text',
+    ),
+    'submit_realm' => 'Save and go back to realm settings',
+  );
+  $export['search_api@default_node_index:block:field_sectors'] = $facet;
 
   $facet = new stdClass();
   $facet->disabled = FALSE; /* Edit this to true to make a default facet disabled initially */
