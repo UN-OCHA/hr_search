@@ -52,7 +52,11 @@ function hr_search_default_search_api_index() {
         "search_api_alter_add_hierarchy" : {
           "status" : 1,
           "weight" : "0",
-          "settings" : { "fields" : { "field_ind_domain:parents_all" : "field_ind_domain:parents_all" } }
+          "settings" : { "fields" : {
+              "field_ind_domain:parents_all" : "field_ind_domain:parents_all",
+              "field_ind_cross_tagging:parents_all" : "field_ind_cross_tagging:parents_all"
+            }
+          }
         }
       },
       "processors" : {
@@ -62,6 +66,8 @@ function hr_search_default_search_api_index() {
           "settings" : { "fields" : {
               "title" : true,
               "title_field" : true,
+              "field_first_name" : true,
+              "field_last_name" : true,
               "field_ind_unit_desc" : true,
               "field_ind_disaggregation" : true,
               "field_ind_general_guidance" : true,
@@ -73,8 +79,6 @@ function hr_search_default_search_api_index() {
               "field_ind_guidance_baseline" : true,
               "field_ind_data_sources" : true,
               "field_ind_comments" : true,
-              "field_first_name" : true,
-              "field_last_name" : true,
               "body:value" : true
             }
           }
@@ -86,6 +90,8 @@ function hr_search_default_search_api_index() {
             "fields" : {
               "title" : true,
               "title_field" : true,
+              "field_first_name" : true,
+              "field_last_name" : true,
               "field_ind_unit_desc" : true,
               "field_ind_disaggregation" : true,
               "field_ind_general_guidance" : true,
@@ -97,8 +103,6 @@ function hr_search_default_search_api_index() {
               "field_ind_guidance_baseline" : true,
               "field_ind_data_sources" : true,
               "field_ind_comments" : true,
-              "field_first_name" : true,
-              "field_last_name" : true,
               "body:value" : true
             },
             "title" : 0,
@@ -113,6 +117,8 @@ function hr_search_default_search_api_index() {
             "fields" : {
               "title" : true,
               "title_field" : true,
+              "field_first_name" : true,
+              "field_last_name" : true,
               "field_ind_unit_desc" : true,
               "field_ind_disaggregation" : true,
               "field_ind_general_guidance" : true,
@@ -124,8 +130,6 @@ function hr_search_default_search_api_index() {
               "field_ind_guidance_baseline" : true,
               "field_ind_data_sources" : true,
               "field_ind_comments" : true,
-              "field_first_name" : true,
-              "field_last_name" : true,
               "body:value" : true
             },
             "spaces" : "[^\\\\p{L}\\\\p{N}]",
@@ -139,6 +143,8 @@ function hr_search_default_search_api_index() {
             "fields" : {
               "title" : true,
               "title_field" : true,
+              "field_first_name" : true,
+              "field_last_name" : true,
               "field_ind_unit_desc" : true,
               "field_ind_disaggregation" : true,
               "field_ind_general_guidance" : true,
@@ -150,8 +156,6 @@ function hr_search_default_search_api_index() {
               "field_ind_guidance_baseline" : true,
               "field_ind_data_sources" : true,
               "field_ind_comments" : true,
-              "field_first_name" : true,
-              "field_last_name" : true,
               "body:value" : true
             },
             "file" : "",
