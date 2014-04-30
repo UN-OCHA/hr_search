@@ -441,7 +441,7 @@ function hr_search_facetapi_default_facet_settings() {
   $facet->enabled = FALSE;
   $facet->settings = array(
     'operator' => 'or',
-    'hard_limit' => '0',
+    'hard_limit' => -1,
     'dependencies' => array(
       'bundle' => 'none',
       'bundle_selected' => array(),
@@ -1274,10 +1274,10 @@ function hr_search_facetapi_default_facet_settings() {
       'indexed' => 0,
     ),
     'sort_weight' => array(
-      'active' => '-50',
-      'count' => '-49',
-      'display' => '-48',
-      'indexed' => '0',
+      'active' => '-48',
+      'count' => '-47',
+      'display' => '-50',
+      'indexed' => '-46',
     ),
     'sort_order' => array(
       'active' => '3',
