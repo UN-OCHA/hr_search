@@ -212,7 +212,7 @@ function hr_search_default_search_api_index() {
         "field_ind_unit" : { "type" : "integer", "entity_type" : "taxonomy_term" },
         "field_ind_denominator" : { "type" : "text", "boost" : "0.5" },
         "field_ind_numerator" : { "type" : "text", "boost" : "0.5" },
-        "field_ind_code" : { "type" : "text" },
+        "field_ind_code" : { "type" : "string" },
         "field_ind_cross_tagging" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_ind_threshold" : { "type" : "text", "boost" : "0.5" },
         "field_ind_general_guidance" : { "type" : "text", "boost" : "0.5" },
