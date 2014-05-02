@@ -742,7 +742,7 @@ function hr_search_facetapi_default_facet_settings() {
     'empty_behavior' => 'none',
     'soft_limit' => '20',
     'nofollow' => 1,
-    'show_expanded' => 0,
+    'show_expanded' => 1,
     'empty_text' => array(
       'value' => '',
       'format' => 'panopoly_wysiwyg_text',
