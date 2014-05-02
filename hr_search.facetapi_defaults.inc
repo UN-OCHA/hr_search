@@ -728,9 +728,9 @@ function hr_search_facetapi_default_facet_settings() {
       'indexed' => 0,
     ),
     'sort_weight' => array(
-      'active' => '-50',
+      'active' => '-48',
       'count' => '-49',
-      'display' => '-48',
+      'display' => '-50',
       'indexed' => '0',
     ),
     'sort_order' => array(
