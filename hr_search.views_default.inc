@@ -32,6 +32,22 @@ function hr_search_views_default_views() {
       'allow_secondary' => 0,
       'secondary_label' => 'Advanced options',
     ),
+    'sort' => array(
+      'bef_format' => 'bef_toggle_links',
+      'advanced' => array(
+        'collapsible' => 0,
+        'collapsible_label' => 'Sort options',
+        'combine' => 1,
+        'combine_rewrite' => 'Date created Asc|Oldest first
+Date created Desc|Newest first
+Relevance Asc|Most relevant first
+Relevance Desc|Least relevant first',
+        'reset' => 0,
+        'reset_label' => '',
+        'is_secondary' => 0,
+      ),
+      'mefibs_block_sort_bef' => '',
+    ),
     'search_api_views_fulltext' => array(
       'bef_format' => 'default',
       'more_options' => array(
@@ -60,6 +76,18 @@ function hr_search_views_default_views() {
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  /* Sort criterion: Search: Relevance */
+  $handler->display->display_options['sorts']['search_api_relevance']['id'] = 'search_api_relevance';
+  $handler->display->display_options['sorts']['search_api_relevance']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['sorts']['search_api_relevance']['field'] = 'search_api_relevance';
+  $handler->display->display_options['sorts']['search_api_relevance']['order'] = 'DESC';
+  $handler->display->display_options['sorts']['search_api_relevance']['expose']['label'] = 'Relevance';
+  /* Sort criterion: Indexed Node: Date created */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  $handler->display->display_options['sorts']['created']['expose']['label'] = 'Date created';
   /* Filter criterion: Indexed Node: Status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'search_api_index_default_node_index';
@@ -100,6 +128,16 @@ function hr_search_views_default_views() {
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['mefibs'] = array(
+    'blocks' => array(),
+    'extras' => array(
+      'sort' => NULL,
+      'items_per_page' => NULL,
+    ),
+    'page' => array(
+      'sort_block' => 'default',
+    ),
+  );
   $handler->display->display_options['path'] = 'search';
   $translatables['hr_search'] = array(
     t('Master'),
@@ -120,6 +158,8 @@ function hr_search_views_default_views() {
     t('Node ID'),
     t('.'),
     t(','),
+    t('Relevance'),
+    t('Date created'),
     t('Search HR.info'),
     t('Page'),
   );
