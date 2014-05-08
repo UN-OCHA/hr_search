@@ -634,7 +634,7 @@ function hr_search_facetapi_default_facet_settings() {
   $facet->facet = 'type';
   $facet->enabled = FALSE;
   $facet->settings = array(
-    'operator' => 'or',
+    'operator' => 'and',
     'hard_limit' => '50',
     'dependencies' => array(
       'roles' => array(),
