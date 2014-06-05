@@ -413,6 +413,7 @@ function hr_search_facetapi_default_facet_settings() {
     'dependencies' => array(
       'bundle' => 'none',
       'bundle_selected' => array(),
+      'roles' => array(),
     ),
     'facet_mincount' => '1',
     'facet_missing' => '0',
@@ -1073,12 +1074,14 @@ function hr_search_facetapi_default_facet_settings() {
     'empty_behavior' => 'none',
     'soft_limit' => '20',
     'nofollow' => 1,
-    'show_expanded' => 0,
+    'show_expanded' => 1,
     'empty_text' => array(
       'value' => '',
       'format' => 'panopoly_wysiwyg_text',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'default_option_label' => '',
+    'submit_page' => '',
   );
   $export['search_api@default_node_index:block:field_document_type'] = $facet;
 
@@ -1411,7 +1414,7 @@ function hr_search_facetapi_default_facet_settings() {
     'empty_behavior' => 'none',
     'soft_limit' => '20',
     'nofollow' => 1,
-    'show_expanded' => 0,
+    'show_expanded' => 1,
     'default_option_label' => '',
     'submit_page' => '',
     'empty_text' => array(
