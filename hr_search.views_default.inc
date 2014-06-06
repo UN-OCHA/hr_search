@@ -177,6 +177,9 @@ Relevance Desc|Least relevant first',
     'hr_event' => 'hr_event',
     'hr_news' => 'hr_news',
     'hr_page' => 'hr_page',
+    'hr_infographic' => 'hr_infographic',
+    'hr_assessment' => 'hr_assessment',
+    'hr_office' => 'hr_office',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
   /* Filter criterion: Search: Fulltext search */
