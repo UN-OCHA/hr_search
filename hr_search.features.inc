@@ -232,7 +232,6 @@ function hr_search_default_search_api_index() {
         "field_event_category" : { "type" : "integer", "entity_type" : "taxonomy_term" },
         "field_first_name" : { "type" : "string" },
         "field_last_name" : { "type" : "string" },
-        "field_job_title" : { "type" : "integer", "entity_type" : "taxonomy_term" },
         "field_opt_out" : { "type" : "boolean" },
         "field_ind_numerator" : { "type" : "text", "boost" : "0.5" },
         "field_ind_unit" : { "type" : "integer", "entity_type" : "taxonomy_term" },
