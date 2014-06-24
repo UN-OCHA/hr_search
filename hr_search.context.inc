@@ -68,6 +68,12 @@ function hr_search_context_default_contexts() {
           'region' => 'sidebar_first',
           'weight' => '-3',
         ),
+        'facetapi-9ew5LitJZ6pWU71gbHp1XW9oAOBwV11z' => array(
+          'module' => 'facetapi',
+          'delta' => '9ew5LitJZ6pWU71gbHp1XW9oAOBwV11z',
+          'region' => 'sidebar_first',
+          'weight' => '-2',
+        ),
       ),
     ),
   );
@@ -135,6 +141,12 @@ function hr_search_context_default_contexts() {
           'delta' => '9GGN5HfHaQpjLAfMWHJknvdGmR74ha9v',
           'region' => 'sidebar_first',
           'weight' => '-3',
+        ),
+        'facetapi-9ew5LitJZ6pWU71gbHp1XW9oAOBwV11z' => array(
+          'module' => 'facetapi',
+          'delta' => '9ew5LitJZ6pWU71gbHp1XW9oAOBwV11z',
+          'region' => 'sidebar_first',
+          'weight' => '-2',
         ),
       ),
     ),
