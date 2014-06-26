@@ -14,3 +14,8 @@ function hr_search_form_views_exposed_form_alter (&$form, $form_state) {
     $form['#info']['filter-search_api_views_fulltext']['label'] = t('Search').' '.$node->title;
   }
 }
+
+function hr_search_facetapi_facet_info_alter(array &$facet_info, array $searcher_info) {
+  $facet_info['field_organizations']['label'] = t('Organization');
+}
+
