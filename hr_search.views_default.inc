@@ -46,7 +46,6 @@ Relevance Desc|Least relevant first',
         'reset_label' => '',
         'is_secondary' => 0,
       ),
-      'mefibs_block_sort_bef' => '',
     ),
     'search_api_views_fulltext' => array(
       'bef_format' => 'default',
@@ -131,16 +130,6 @@ Relevance Desc|Least relevant first',
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['exposed_block'] = TRUE;
-  $handler->display->display_options['mefibs'] = array(
-    'blocks' => array(),
-    'extras' => array(
-      'sort' => NULL,
-      'items_per_page' => NULL,
-    ),
-    'page' => array(
-      'sort_block' => 'default',
-    ),
-  );
   $handler->display->display_options['path'] = 'search';
 
   /* Display: Space search */
@@ -196,16 +185,6 @@ Relevance Desc|Least relevant first',
     2 => '2',
     1 => 0,
     30037204 => 0,
-  );
-  $handler->display->display_options['mefibs'] = array(
-    'blocks' => array(),
-    'extras' => array(
-      'sort' => NULL,
-      'items_per_page' => NULL,
-    ),
-    'page' => array(
-      'sort_block' => 'default',
-    ),
   );
   $handler->display->display_options['path'] = 'node/%/search';
   $translatables['hr_search'] = array(
