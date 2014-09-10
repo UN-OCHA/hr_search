@@ -57,7 +57,7 @@ function hr_search_current_search_default_items() {
       ),
     ),
     'advanced' => array(
-      'empty_searches' => '3',
+      'empty_searches' => '1',
     ),
   );
   $export['hr_current_search'] = $item;
