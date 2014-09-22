@@ -44,6 +44,12 @@ function hr_search_context_default_contexts() {
           'region' => 'sidebar_first',
           'weight' => '-8',
         ),
+        'facetapi-2VJqM7IlPMSIoTIQrsoqy1dgG563hXbS' => array(
+          'module' => 'facetapi',
+          'delta' => '2VJqM7IlPMSIoTIQrsoqy1dgG563hXbS',
+          'region' => 'sidebar_first',
+          'weight' => '-7',
+        ),
         'facetapi-ZXNTNWz3w05hh3aLGFw0ofPRZUa5biIZ' => array(
           'module' => 'facetapi',
           'delta' => 'ZXNTNWz3w05hh3aLGFw0ofPRZUa5biIZ',
