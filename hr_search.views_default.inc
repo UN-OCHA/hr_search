@@ -61,15 +61,16 @@ function hr_search_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
+    'hr_assessment' => 'hr_assessment',
+    'hr_news' => 'hr_news',
     'hr_contact' => 'hr_contact',
     'hr_dataset' => 'hr_dataset',
     'hr_document' => 'hr_document',
     'hr_event' => 'hr_event',
-    'hr_news' => 'hr_news',
-    'hr_page' => 'hr_page',
     'hr_infographic' => 'hr_infographic',
-    'hr_assessment' => 'hr_assessment',
     'hr_office' => 'hr_office',
+    'hr_page' => 'hr_page',
+    'hr_toolbox_item' => 'hr_toolbox_item',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
   /* Filter criterion: Search: Fulltext search */
@@ -97,7 +98,7 @@ function hr_search_views_default_views() {
   $handler = $view->new_display('page', 'Space search', 'space');
   $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Indexed Node: Space(s) */
+  /* Contextual filter: Indexed Node: Groups audience */
   $handler->display->display_options['arguments']['og_group_ref']['id'] = 'og_group_ref';
   $handler->display->display_options['arguments']['og_group_ref']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['arguments']['og_group_ref']['field'] = 'og_group_ref';
