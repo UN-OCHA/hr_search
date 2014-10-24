@@ -19,3 +19,11 @@ function hr_search_facetapi_facet_info_alter(array &$facet_info, array $searcher
   $facet_info['field_organizations']['label'] = t('Organization');
 }
 
+/**
+ * Implements hook_form_FORM_ID_alter()
+ * Adds chosen-disable class to search_api_sorts_widget
+ */
+function hr_search_form_search_api_sorts_widget_form_alter(&$form, &$form_state) {
+  $form['sort_by']['#attributes'] = array('class' => array('chosen-disable'));
+}
+
