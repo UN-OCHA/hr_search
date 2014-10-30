@@ -163,12 +163,12 @@ function hr_search_facetapi_default_facet_settings() {
     'dependencies' => array(
       'bundle' => 'none',
       'bundle_selected' => array(),
-      'roles' => array(),
     ),
     'facet_mincount' => '1',
     'facet_missing' => '0',
     'flatten' => 0,
     'query_type' => 'term',
+    'limit_active_items' => 0,
     'default_true' => '1',
     'facet_search_ids' => array(),
     'exclude' => 0,
@@ -358,12 +358,12 @@ function hr_search_facetapi_default_facet_settings() {
     'dependencies' => array(
       'bundle' => 'none',
       'bundle_selected' => array(),
-      'roles' => array(),
     ),
     'facet_mincount' => '1',
     'facet_missing' => '0',
     'flatten' => '0',
     'query_type' => 'term',
+    'limit_active_items' => 0,
     'default_true' => '1',
     'facet_search_ids' => array(),
     'exclude' => 0,
@@ -795,6 +795,7 @@ function hr_search_facetapi_default_facet_settings() {
     'facet_search_ids' => array(),
     'exclude' => 0,
     'pretty_paths_alias' => 'global-clusters',
+    'limit_active_items' => 0,
   );
   $export['search_api@default_node_index::field_sectors'] = $facet;
 
@@ -920,6 +921,8 @@ function hr_search_facetapi_default_facet_settings() {
       'format' => 'panopoly_wysiwyg_text',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'facet_more_text' => 'Show more',
+    'facet_fewer_text' => 'Show fewer',
   );
   $export['search_api@default_node_index:block:field_asst_status'] = $facet;
 
@@ -962,6 +965,8 @@ function hr_search_facetapi_default_facet_settings() {
       'format' => 'panopoly_wysiwyg_text',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'facet_more_text' => 'Show more',
+    'facet_fewer_text' => 'Show fewer',
   );
   $export['search_api@default_node_index:block:field_bundles'] = $facet;
 
@@ -1004,6 +1009,8 @@ function hr_search_facetapi_default_facet_settings() {
       'format' => 'panopoly_wysiwyg_text',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'facet_more_text' => 'Show more',
+    'facet_fewer_text' => 'Show fewer',
   );
   $export['search_api@default_node_index:block:field_coordination_hubs'] = $facet;
 
@@ -1046,6 +1053,8 @@ function hr_search_facetapi_default_facet_settings() {
       'format' => 'panopoly_wysiwyg_text',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'facet_more_text' => 'Show more',
+    'facet_fewer_text' => 'Show fewer',
   );
   $export['search_api@default_node_index:block:field_dataset_categories'] = $facet;
 
@@ -1088,6 +1097,8 @@ function hr_search_facetapi_default_facet_settings() {
       'format' => 'panopoly_wysiwyg_text',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'facet_more_text' => 'Show more',
+    'facet_fewer_text' => 'Show fewer',
   );
   $export['search_api@default_node_index:block:field_dataset_types'] = $facet;
 
@@ -1122,6 +1133,8 @@ function hr_search_facetapi_default_facet_settings() {
       'indexed' => '4',
     ),
     'empty_behavior' => 'none',
+    'facet_more_text' => 'Show more',
+    'facet_fewer_text' => 'Show fewer',
     'soft_limit' => '20',
     'nofollow' => 1,
     'show_expanded' => 0,
@@ -1172,6 +1185,8 @@ function hr_search_facetapi_default_facet_settings() {
       'format' => 'panopoly_wysiwyg_text',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'facet_more_text' => 'Show more',
+    'facet_fewer_text' => 'Show fewer',
   );
   $export['search_api@default_node_index:block:field_disasters'] = $facet;
 
@@ -1216,6 +1231,8 @@ function hr_search_facetapi_default_facet_settings() {
     'submit_realm' => 'Save and go back to realm settings',
     'default_option_label' => '',
     'submit_page' => '',
+    'facet_more_text' => 'Show more',
+    'facet_fewer_text' => 'Show fewer',
   );
   $export['search_api@default_node_index:block:field_document_type'] = $facet;
 
@@ -1258,6 +1275,8 @@ function hr_search_facetapi_default_facet_settings() {
       'format' => 'panopoly_wysiwyg_text',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'facet_more_text' => 'Show more',
+    'facet_fewer_text' => 'Show fewer',
   );
   $export['search_api@default_node_index:block:field_event_category'] = $facet;
 
@@ -1346,8 +1365,46 @@ function hr_search_facetapi_default_facet_settings() {
       'format' => 'panopoly_wysiwyg_text',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'facet_more_text' => 'Show more',
+    'facet_fewer_text' => 'Show fewer',
   );
   $export['search_api@default_node_index:block:field_funding_methods'] = $facet;
+
+  $facet = new stdClass();
+  $facet->disabled = FALSE; /* Edit this to true to make a default facet disabled initially */
+  $facet->api_version = 1;
+  $facet->name = 'search_api@default_node_index:block:field_funding_types';
+  $facet->searcher = 'search_api@default_node_index';
+  $facet->realm = 'block';
+  $facet->facet = 'field_funding_types';
+  $facet->enabled = TRUE;
+  $facet->settings = array(
+    'weight' => 0,
+    'widget' => 'facetapi_links',
+    'filters' => array(),
+    'active_sorts' => array(
+      'active' => 'active',
+      'count' => 'count',
+      'display' => 'display',
+    ),
+    'sort_weight' => array(
+      'active' => -50,
+      'count' => -49,
+      'display' => -48,
+    ),
+    'sort_order' => array(
+      'active' => 3,
+      'count' => 3,
+      'display' => 4,
+    ),
+    'empty_behavior' => 'none',
+    'facet_more_text' => 'Show more',
+    'facet_fewer_text' => 'Show fewer',
+    'soft_limit' => 20,
+    'nofollow' => 1,
+    'show_expanded' => 0,
+  );
+  $export['search_api@default_node_index:block:field_funding_types'] = $facet;
 
   $facet = new stdClass();
   $facet->disabled = FALSE; /* Edit this to true to make a default facet disabled initially */
@@ -1390,6 +1447,8 @@ function hr_search_facetapi_default_facet_settings() {
       'format' => 'panopoly_wysiwyg_text',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'facet_more_text' => 'Show more',
+    'facet_fewer_text' => 'Show fewer',
   );
   $export['search_api@default_node_index:block:field_geographic_level'] = $facet;
 
@@ -1424,6 +1483,8 @@ function hr_search_facetapi_default_facet_settings() {
       'indexed' => '4',
     ),
     'empty_behavior' => 'none',
+    'facet_more_text' => 'Show more',
+    'facet_fewer_text' => 'Show fewer',
     'soft_limit' => '20',
     'nofollow' => 1,
     'show_expanded' => 0,
@@ -1476,6 +1537,8 @@ function hr_search_facetapi_default_facet_settings() {
     'submit_realm' => 'Save and go back to realm settings',
     'default_option_label' => '',
     'submit_page' => '',
+    'facet_more_text' => 'Show more',
+    'facet_fewer_text' => 'Show fewer',
   );
   $export['search_api@default_node_index:block:field_ind_cross_tagging'] = $facet;
 
@@ -1520,6 +1583,8 @@ function hr_search_facetapi_default_facet_settings() {
     'submit_realm' => 'Save and go back to realm settings',
     'default_option_label' => '',
     'submit_page' => '',
+    'facet_more_text' => 'Show more',
+    'facet_fewer_text' => 'Show fewer',
   );
   $export['search_api@default_node_index:block:field_ind_domain'] = $facet;
 
@@ -1562,6 +1627,8 @@ function hr_search_facetapi_default_facet_settings() {
       'format' => 'panopoly_wysiwyg_text',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'facet_more_text' => 'Show more',
+    'facet_fewer_text' => 'Show fewer',
   );
   $export['search_api@default_node_index:block:field_ind_key'] = $facet;
 
@@ -1604,6 +1671,8 @@ function hr_search_facetapi_default_facet_settings() {
       'format' => 'panopoly_wysiwyg_text',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'facet_more_text' => 'Show more',
+    'facet_fewer_text' => 'Show fewer',
   );
   $export['search_api@default_node_index:block:field_ind_standards'] = $facet;
 
@@ -1646,6 +1715,8 @@ function hr_search_facetapi_default_facet_settings() {
       'format' => 'panopoly_wysiwyg_text',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'facet_more_text' => 'Show more',
+    'facet_fewer_text' => 'Show fewer',
   );
   $export['search_api@default_node_index:block:field_ind_types'] = $facet;
 
@@ -1690,6 +1761,8 @@ function hr_search_facetapi_default_facet_settings() {
       'format' => 'panopoly_wysiwyg_text',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'facet_more_text' => 'Show more',
+    'facet_fewer_text' => 'Show fewer',
   );
   $export['search_api@default_node_index:block:field_infographic_type'] = $facet;
 
@@ -1732,6 +1805,8 @@ function hr_search_facetapi_default_facet_settings() {
       'format' => 'panopoly_wysiwyg_text',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'facet_more_text' => 'Show more',
+    'facet_fewer_text' => 'Show fewer',
   );
   $export['search_api@default_node_index:block:field_languages:safe_value'] = $facet;
 
@@ -1774,6 +1849,8 @@ function hr_search_facetapi_default_facet_settings() {
       'format' => 'panopoly_wysiwyg_text',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'facet_more_text' => 'Show more',
+    'facet_fewer_text' => 'Show fewer',
   );
   $export['search_api@default_node_index:block:field_location'] = $facet;
 
@@ -1816,6 +1893,8 @@ function hr_search_facetapi_default_facet_settings() {
       'format' => 'panopoly_wysiwyg_text',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'facet_more_text' => 'Show more',
+    'facet_fewer_text' => 'Show fewer',
   );
   $export['search_api@default_node_index:block:field_locations'] = $facet;
 
@@ -1858,6 +1937,8 @@ function hr_search_facetapi_default_facet_settings() {
       'format' => 'panopoly_wysiwyg_text',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'facet_more_text' => 'Show more',
+    'facet_fewer_text' => 'Show fewer',
   );
   $export['search_api@default_node_index:block:field_organizations'] = $facet;
 
@@ -1902,6 +1983,8 @@ function hr_search_facetapi_default_facet_settings() {
       'format' => 'panopoly_wysiwyg_text',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'facet_more_text' => 'Show more',
+    'facet_fewer_text' => 'Show fewer',
   );
   $export['search_api@default_node_index:block:field_organizations2'] = $facet;
 
@@ -1946,6 +2029,8 @@ function hr_search_facetapi_default_facet_settings() {
       'format' => 'panopoly_wysiwyg_text',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'facet_more_text' => 'Show more',
+    'facet_fewer_text' => 'Show fewer',
   );
   $export['search_api@default_node_index:block:field_population_types'] = $facet;
 
@@ -1988,6 +2073,8 @@ function hr_search_facetapi_default_facet_settings() {
       'format' => 'panopoly_wysiwyg_text',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'facet_more_text' => 'Show more',
+    'facet_fewer_text' => 'Show fewer',
   );
   $export['search_api@default_node_index:block:field_publication_date'] = $facet;
 
@@ -2030,6 +2117,8 @@ function hr_search_facetapi_default_facet_settings() {
       'format' => 'panopoly_wysiwyg_text',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'facet_more_text' => 'Show more',
+    'facet_fewer_text' => 'Show fewer',
   );
   $export['search_api@default_node_index:block:field_sector'] = $facet;
 
@@ -2072,6 +2161,8 @@ function hr_search_facetapi_default_facet_settings() {
       'format' => 'panopoly_wysiwyg_text',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'facet_more_text' => 'Show more',
+    'facet_fewer_text' => 'Show fewer',
   );
   $export['search_api@default_node_index:block:field_sectors'] = $facet;
 
@@ -2114,6 +2205,8 @@ function hr_search_facetapi_default_facet_settings() {
       'format' => 'panopoly_wysiwyg_text',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'facet_more_text' => 'Show more',
+    'facet_fewer_text' => 'Show fewer',
   );
   $export['search_api@default_node_index:block:field_themes'] = $facet;
 
@@ -2156,6 +2249,8 @@ function hr_search_facetapi_default_facet_settings() {
       'format' => 'panopoly_wysiwyg_text',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'facet_more_text' => 'Show more',
+    'facet_fewer_text' => 'Show fewer',
   );
   $export['search_api@default_node_index:block:og_group_ref'] = $facet;
 
@@ -2200,6 +2295,8 @@ function hr_search_facetapi_default_facet_settings() {
       'format' => 'panopoly_wysiwyg_text',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'facet_more_text' => 'Show more',
+    'facet_fewer_text' => 'Show fewer',
   );
   $export['search_api@default_node_index:block:type'] = $facet;
 

@@ -80,6 +80,12 @@ function hr_search_context_default_contexts() {
           'region' => 'sidebar_first',
           'weight' => '-2',
         ),
+        'facetapi-0CbFePinGPnR91BPy9cOYZ4dp10umIAF' => array(
+          'module' => 'facetapi',
+          'delta' => '0CbFePinGPnR91BPy9cOYZ4dp10umIAF',
+          'region' => 'sidebar_first',
+          'weight' => '-1',
+        ),
       ),
     ),
   );

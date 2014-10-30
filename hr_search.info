@@ -64,6 +64,7 @@ features[facetapi][] = search_api@default_node_index:block:field_document_type
 features[facetapi][] = search_api@default_node_index:block:field_event_category
 features[facetapi][] = search_api@default_node_index:block:field_functional_roles
 features[facetapi][] = search_api@default_node_index:block:field_funding_methods
+features[facetapi][] = search_api@default_node_index:block:field_funding_types
 features[facetapi][] = search_api@default_node_index:block:field_geographic_level
 features[facetapi][] = search_api@default_node_index:block:field_glide_type
 features[facetapi][] = search_api@default_node_index:block:field_ind_cross_tagging
