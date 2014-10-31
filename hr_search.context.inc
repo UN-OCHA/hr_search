@@ -80,9 +80,9 @@ function hr_search_context_default_contexts() {
           'region' => 'sidebar_first',
           'weight' => '-2',
         ),
-        'facetapi-0CbFePinGPnR91BPy9cOYZ4dp10umIAF' => array(
+        'facetapi-b5bh0kCY1bW8OCpa4wz1BXZJB31r0aAK' => array(
           'module' => 'facetapi',
-          'delta' => '0CbFePinGPnR91BPy9cOYZ4dp10umIAF',
+          'delta' => 'b5bh0kCY1bW8OCpa4wz1BXZJB31r0aAK',
           'region' => 'sidebar_first',
           'weight' => '-1',
         ),
