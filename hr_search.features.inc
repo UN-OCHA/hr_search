@@ -287,7 +287,7 @@ function hr_search_default_search_api_index() {
         "title_field" : { "type" : "text" },
         "type" : { "type" : "string" },
         "url" : { "type" : "uri" }
-      },
+      }
     },
     "enabled" : "1",
     "read_only" : "0"
