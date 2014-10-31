@@ -236,7 +236,8 @@ function hr_search_default_search_api_index() {
         "field_event_date:value2" : { "type" : "list\\u003Cdate\\u003E" },
         "field_first_name" : { "type" : "string" },
         "field_funding_methods" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
-        "field_funding_types" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
+        "field_funding_type" : { "type" : "integer", "entity_type" : "taxonomy_term" },
+        "field_fundings" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
         "field_geographic_level" : { "type" : "integer", "entity_type" : "node" },
         "field_glide_type" : { "type" : "integer", "entity_type" : "taxonomy_term" },
         "field_ind_code" : { "type" : "string" },
@@ -286,7 +287,7 @@ function hr_search_default_search_api_index() {
         "title_field" : { "type" : "text" },
         "type" : { "type" : "string" },
         "url" : { "type" : "uri" }
-      }
+      },
     },
     "enabled" : "1",
     "read_only" : "0"
