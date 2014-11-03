@@ -287,7 +287,8 @@ function hr_search_default_search_api_index() {
         "title_field" : { "type" : "text" },
         "type" : { "type" : "string" },
         "url" : { "type" : "uri" }
-      }
+      },
+      "sorts_widget" : { "enabled" : 1, "autosubmit" : 1, "autosubmit_hide" : 1, "title" : "" }
     },
     "enabled" : "1",
     "read_only" : "0"
@@ -321,6 +322,133 @@ function hr_search_default_search_api_server() {
       "autocorrect_suggest_words" : 1
     },
     "enabled" : "1"
+  }');
+  return $items;
+}
+
+/**
+ * Implements hook_default_search_api_sort().
+ */
+function hr_search_default_search_api_sort() {
+  $items = array();
+  $items['default_node_index__changed'] = entity_import('search_api_sort', '{
+    "index_id" : "default_node_index",
+    "field" : "changed",
+    "name" : "Last updated",
+    "enabled" : "1",
+    "weight" : "0",
+    "identifier" : "default_node_index__changed",
+    "default_sort" : "0",
+    "default_sort_no_terms" : "0",
+    "default_order" : "desc",
+    "settings" : {
+      "default_true" : "0",
+      "search_ids" : {
+        "search_api_views:hr_news:list" : "search_api_views:hr_news:list",
+        "search_api_views:hr_events:calendar" : "search_api_views:hr_events:calendar"
+      }
+    },
+    "options" : { "field_name" : "Date changed" }
+  }');
+  $items['default_node_index__created'] = entity_import('search_api_sort', '{
+    "index_id" : "default_node_index",
+    "field" : "created",
+    "name" : "Date created",
+    "enabled" : "1",
+    "weight" : "0",
+    "identifier" : "default_node_index__created",
+    "default_sort" : "0",
+    "default_sort_no_terms" : "0",
+    "default_order" : "desc",
+    "settings" : {
+      "default_true" : "0",
+      "search_ids" : { "search_api_views:hr_news:list" : "search_api_views:hr_news:list" }
+    },
+    "options" : { "field_name" : "Date created" }
+  }');
+  $items['default_node_index__field_asst_date:value'] = entity_import('search_api_sort', '{
+    "index_id" : "default_node_index",
+    "field" : "field_asst_date:value",
+    "name" : "Assessment Date",
+    "enabled" : "1",
+    "weight" : "0",
+    "identifier" : "default_node_index__field_asst_date:value",
+    "default_sort" : "0",
+    "default_sort_no_terms" : "0",
+    "default_order" : "desc",
+    "settings" : {
+      "default_true" : "0",
+      "search_ids" : { "search_api_views:hr_news:list" : "search_api_views:hr_news:list" }
+    },
+    "options" : { "field_name" : "Date \\u00bb Start date" }
+  }');
+  $items['default_node_index__field_ds_date'] = entity_import('search_api_sort', '{
+    "index_id" : "default_node_index",
+    "field" : "field_ds_date",
+    "name" : "Dataset Date",
+    "enabled" : "1",
+    "weight" : "0",
+    "identifier" : "default_node_index__field_ds_date",
+    "default_sort" : "0",
+    "default_sort_no_terms" : "0",
+    "default_order" : "desc",
+    "settings" : {
+      "default_true" : "0",
+      "search_ids" : { "search_api_views:hr_news:list" : "search_api_views:hr_news:list" }
+    },
+    "options" : { "field_name" : "Dataset Date" }
+  }');
+  $items['default_node_index__field_first_name'] = entity_import('search_api_sort', '{
+    "index_id" : "default_node_index",
+    "field" : "field_first_name",
+    "name" : "First name",
+    "enabled" : "1",
+    "weight" : "0",
+    "identifier" : "default_node_index__field_first_name",
+    "default_sort" : "0",
+    "default_sort_no_terms" : "0",
+    "default_order" : "desc",
+    "settings" : {
+      "default_true" : "0",
+      "search_ids" : { "search_api_views:hr_news:list" : "search_api_views:hr_news:list" }
+    },
+    "options" : { "field_name" : "First name" }
+  }');
+  $items['default_node_index__field_last_name'] = entity_import('search_api_sort', '{
+    "index_id" : "default_node_index",
+    "field" : "field_last_name",
+    "name" : "Last name",
+    "enabled" : "1",
+    "weight" : "0",
+    "identifier" : "default_node_index__field_last_name",
+    "default_sort" : "0",
+    "default_sort_no_terms" : "0",
+    "default_order" : "desc",
+    "settings" : {
+      "default_true" : "0",
+      "search_ids" : { "search_api_views:hr_news:list" : "search_api_views:hr_news:list" }
+    },
+    "options" : { "field_name" : "Last name" }
+  }');
+  $items['default_node_index__field_publication_date'] = entity_import('search_api_sort', '{
+    "index_id" : "default_node_index",
+    "field" : "field_publication_date",
+    "name" : "Publication Date",
+    "enabled" : "1",
+    "weight" : "0",
+    "identifier" : "default_node_index__field_publication_date",
+    "default_sort" : "0",
+    "default_sort_no_terms" : "1",
+    "default_order" : "desc",
+    "settings" : {
+      "default_true" : "0",
+      "search_ids" : {
+        "search_api_views:hr_documents:list" : "search_api_views:hr_documents:list",
+        "search_api_views:hr_documents:table" : "search_api_views:hr_documents:table",
+        "search_api_views:hr_documents:master" : "search_api_views:hr_documents:master"
+      }
+    },
+    "options" : { "field_name" : "Publication Date" }
   }');
   return $items;
 }
