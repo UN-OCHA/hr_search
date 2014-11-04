@@ -445,7 +445,9 @@ function hr_search_default_search_api_sort() {
       "search_ids" : {
         "search_api_views:hr_documents:list" : "search_api_views:hr_documents:list",
         "search_api_views:hr_documents:table" : "search_api_views:hr_documents:table",
-        "search_api_views:hr_documents:master" : "search_api_views:hr_documents:master"
+        "search_api_views:hr_documents:master" : "search_api_views:hr_documents:master",
+        "search_api_views:hr_infographics:table" : "search_api_views:hr_infographics:table",
+        "search_api_views:hr_infographics:master" : "search_api_views:hr_infographics:master"
       }
     },
     "options" : { "field_name" : "Publication Date" }
