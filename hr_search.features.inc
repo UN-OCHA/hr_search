@@ -344,8 +344,9 @@ function hr_search_default_search_api_sort() {
     "settings" : {
       "default_true" : "0",
       "search_ids" : {
-        "search_api_views:hr_news:list" : "search_api_views:hr_news:list",
-        "search_api_views:hr_events:calendar" : "search_api_views:hr_events:calendar"
+        "search_api_views:hr_datasets:list" : "search_api_views:hr_datasets:list",
+        "search_api_views:hr_datasets:master" : "search_api_views:hr_datasets:master",
+        "search_api_views:hr_datasets:table" : "search_api_views:hr_datasets:table"
       }
     },
     "options" : { "field_name" : "Date changed" }
@@ -362,7 +363,13 @@ function hr_search_default_search_api_sort() {
     "default_order" : "desc",
     "settings" : {
       "default_true" : "0",
-      "search_ids" : { "search_api_views:hr_news:list" : "search_api_views:hr_news:list" }
+      "search_ids" : {
+        "search_api_views:hr_news:list" : "search_api_views:hr_news:list",
+        "search_api_views:hr_news:page" : "search_api_views:hr_news:page",
+        "search_api_views:hr_datasets:list" : "search_api_views:hr_datasets:list",
+        "search_api_views:hr_datasets:master" : "search_api_views:hr_datasets:master",
+        "search_api_views:hr_datasets:table" : "search_api_views:hr_datasets:table"
+      }
     },
     "options" : { "field_name" : "Date created" }
   }');
@@ -378,7 +385,10 @@ function hr_search_default_search_api_sort() {
     "default_order" : "desc",
     "settings" : {
       "default_true" : "0",
-      "search_ids" : { "search_api_views:hr_news:list" : "search_api_views:hr_news:list" }
+      "search_ids" : {
+        "search_api_views:hr_assessments:master" : "search_api_views:hr_assessments:master",
+        "search_api_views:hr_assessments:table" : "search_api_views:hr_assessments:table"
+      }
     },
     "options" : { "field_name" : "Date \\u00bb Start date" }
   }');
@@ -394,7 +404,11 @@ function hr_search_default_search_api_sort() {
     "default_order" : "desc",
     "settings" : {
       "default_true" : "0",
-      "search_ids" : { "search_api_views:hr_news:list" : "search_api_views:hr_news:list" }
+      "search_ids" : {
+        "search_api_views:hr_datasets:list" : "search_api_views:hr_datasets:list",
+        "search_api_views:hr_datasets:master" : "search_api_views:hr_datasets:master",
+        "search_api_views:hr_datasets:table" : "search_api_views:hr_datasets:table"
+      }
     },
     "options" : { "field_name" : "Dataset Date" }
   }');
@@ -410,7 +424,11 @@ function hr_search_default_search_api_sort() {
     "default_order" : "desc",
     "settings" : {
       "default_true" : "0",
-      "search_ids" : { "search_api_views:hr_news:list" : "search_api_views:hr_news:list" }
+      "search_ids" : {
+        "search_api_views:hr_contacts:table" : "search_api_views:hr_contacts:table",
+        "search_api_views:hr_contacts:list" : "search_api_views:hr_contacts:list",
+        "search_api_views:hr_contacts:master" : "search_api_views:hr_contacts:master"
+      }
     },
     "options" : { "field_name" : "First name" }
   }');
@@ -426,7 +444,11 @@ function hr_search_default_search_api_sort() {
     "default_order" : "desc",
     "settings" : {
       "default_true" : "0",
-      "search_ids" : { "search_api_views:hr_news:list" : "search_api_views:hr_news:list" }
+      "search_ids" : {
+        "search_api_views:hr_contacts:table" : "search_api_views:hr_contacts:table",
+        "search_api_views:hr_contacts:list" : "search_api_views:hr_contacts:list",
+        "search_api_views:hr_contacts:master" : "search_api_views:hr_contacts:master"
+      }
     },
     "options" : { "field_name" : "Last name" }
   }');
