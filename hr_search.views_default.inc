@@ -131,6 +131,7 @@ function hr_search_views_default_views() {
     'hr_infographic' => 'hr_infographic',
     'hr_assessment' => 'hr_assessment',
     'hr_office' => 'hr_office',
+    'hr_toolbox_item' => 'hr_toolbox_item',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
   /* Filter criterion: Search: Fulltext search */
