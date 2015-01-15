@@ -92,6 +92,12 @@ function hr_search_context_default_contexts() {
           'region' => 'sidebar_first',
           'weight' => '0',
         ),
+        'facetapi-SEcKjZK5tfurGpvrhp6Z9y3447HT7e2S' => array(
+          'module' => 'facetapi',
+          'delta' => 'SEcKjZK5tfurGpvrhp6Z9y3447HT7e2S',
+          'region' => 'sidebar_first',
+          'weight' => '1',
+        ),
       ),
     ),
   );
