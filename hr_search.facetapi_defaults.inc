@@ -768,6 +768,7 @@ function hr_search_facetapi_default_facet_settings() {
     'facet_search_ids' => array(),
     'date_granularity' => 'MONTH',
     'pretty_paths_alias' => 'publication-date',
+    'limit_active_items' => 0,
   );
   $export['search_api@default_node_index::field_publication_date'] = $facet;
 
@@ -2118,22 +2119,22 @@ function hr_search_facetapi_default_facet_settings() {
     'widget' => 'facetapi_links',
     'filters' => array(),
     'active_sorts' => array(
+      'indexed' => 'indexed',
       'display' => 'display',
       'active' => 'active',
       'count' => 'count',
-      'indexed' => 0,
     ),
     'sort_weight' => array(
+      'display' => '-49',
       'active' => '-48',
       'count' => '-47',
-      'display' => '-50',
-      'indexed' => '-46',
+      'indexed' => '-50',
     ),
     'sort_order' => array(
+      'display' => '3',
       'active' => '3',
       'count' => '3',
-      'display' => '3',
-      'indexed' => '4',
+      'indexed' => '3',
     ),
     'empty_behavior' => 'none',
     'soft_limit' => '20',
