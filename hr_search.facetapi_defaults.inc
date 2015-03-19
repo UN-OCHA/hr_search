@@ -46,7 +46,7 @@ function hr_search_facetapi_default_facet_settings() {
   $facet->facet = 'field_bundles';
   $facet->enabled = FALSE;
   $facet->settings = array(
-    'operator' => 'or',
+    'operator' => 'and',
     'hard_limit' => '50',
     'dependencies' => array(
       'bundle' => 'none',
