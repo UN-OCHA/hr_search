@@ -27,3 +27,15 @@ function hr_search_form_search_api_sorts_widget_form_alter(&$form, &$form_state)
   $form['sort_by']['#attributes'] = array('class' => array('chosen-disable'));
 }
 
+/**
+ * Implements hook_entity_delete()
+ *
+ * Marks entities as dirty to be reindexed in the search index
+ */
+function hr_search_entity_delete($entity, $type) {
+  if ($type == 'og_membership') {
+    search_api_track_item_change($entity->entity_type, array($entity->etid));
+  }
+
+}
+
