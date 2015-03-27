@@ -219,6 +219,7 @@ function hr_search_default_search_api_index() {
         "field_asst_subject" : { "type" : "text" },
         "field_asst_unit" : { "type" : "list\\u003Cstring\\u003E" },
         "field_bundles" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
+        "field_bundles:field_sector" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
         "field_coordination_hubs" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
         "field_dataset_categories" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_dataset_types" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
