@@ -330,7 +330,7 @@ function hr_search_default_search_api_server() {
       "excerpt" : 0,
       "retrieve_data" : 0,
       "highlight_data" : 0,
-      "http_method" : "AUTO",
+      "http_method" : "POST",
       "autocorrect_spell" : 1,
       "autocorrect_suggest_words" : 1
     },
